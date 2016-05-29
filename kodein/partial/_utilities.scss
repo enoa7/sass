@@ -38,15 +38,6 @@ ul.nodots {
     visibility: hidden;
 }
 
-.vcenter > div {
-    display: inline-block;
-    vertical-align: middle;
-    float: none;
-    &:last-child {
-        margin-left: -5px;
-    }
-}
-
 .relative {
     position: relative;
 }
@@ -114,3 +105,27 @@ $direction: top right bottom left;
 
 
 /* ------------------------------------ */
+
+/*use the nofloat if child(div) elements are float*/
+.vertical-align-nofloat > div,
+.vertical-align-nofloat > ul {
+    display: inline-block;
+    float: none !important;
+
+    vertical-align: middle;
+}
+/*move the all child of the div except the first child so that it can sit side by side*/
+.vertical-align-nofloat > div:not(first-child),
+.vertical-align-nofloat > ul:not(first-child) {
+    margin-left: -4px;
+}
+
+/* create skew object - it must have the correct html structure*/
+.skew {
+    &-bg {
+        transform: skew(0, -3deg); //skew
+    }
+    &-content {
+        transform: skew(0, 3deg);  //inverse skew
+    }
+}

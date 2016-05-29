@@ -1,0 +1,249 @@
+@charset "UTF-8";
+/*
+ * MAIN SASS
+ */
+/* --------------------------------
+ * List of Useful Mixins
+ * -------------------------------- */
+/* Replace Media Queries with Mixins */
+/* ------------------------------------
+ * Spacing - Padding and Margin
+ * ------------------------------------ */
+/* Add greyscale effect on the image */
+/* Animation and Keyframes */
+/* usage
+
+	@include keyframes(slide-down) {
+	  0% { opacity: 1; }
+	  90% { opacity: 0; }
+	}
+
+	.element {
+	  width: 100px;
+	  height: 100px;
+	  background: black;
+	  @include animation('slide-down 5s 3');
+	}
+*/
+/* Usage
+ @include transition(color .3s ease); 
+*/
+/* Usage
+ @include transform(?????); 
+*/
+/* Prefix */
+/* Cross Browser Opacity */
+/*
+* UtilityBelt - a starter kit for any SASS project
+* By @dmtintner & @hackingui
+* Documentation and examples - hackingui.com/front-end/10-best-scss-utilities/
+* V1.1.0
+*/
+/*
+## Triangle
+* @include triangle within a pseudo element and add positioning properties (ie. top, left)
+* $direction: up, down, left, right
+*/
+/*
+* Currency
+*/
+/*
+* Clearfix
+*/
+/*
+* Respond To
+*/
+/*
+* Ghost Vertical Align
+*/
+/*
+* Truncate Text
+*/
+/*
+* Animation
+*/
+/*
+* Alerted
+*/
+@-webkit-keyframes alertMe {
+  from {
+    border-width: 3px;
+    border-color: gold; }
+  to {
+    border-width: 0;
+    border-color: rgba(255, 215, 0, 0.1); } }
+@-moz-keyframes alertMe {
+  from {
+    border-width: 3px;
+    border-color: gold; }
+  to {
+    border-width: 0;
+    border-color: rgba(255, 215, 0, 0.1); } }
+@keyframes alertMe {
+  from {
+    border-width: 3px;
+    border-color: gold; }
+  to {
+    border-width: 0;
+    border-color: rgba(255, 215, 0, 0.1); } }
+/*
+* Resize Sprite - for resizing only a single image from a sprite
+*
+* params: $map = $<name>-sprites (ex. $icon-sprites)
+*         $sprite = file name w/o file type ending (ex. globe)
+          $percent = number (ex. 50)
+*
+* (if compass CSS3 mixins not included, uncomment the background-size row and comment the @include version)
+*/
+/*
+* Resizes all images in a given sprite
+* mixin courtesy of Wilker L├║cio https://gist.github.com/wilkerlucio/6442309
+* params: $only = if you want to list specific files instead of regenerating every image (ex. globe, checkmark)
+*/
+/*
+* HUI Tooltips
+*/
+/*
+## Text-align justify
+For perfectly aligned grids that don't rely on floating elements and difficult calculations
+
+- http://www.barrelny.com/blog/text-align-justify-and-rwd/ */
+/* Import Partial CSS */
+/* =================
+* Utility Classes
+* ================= */
+.fullwidth {
+  width: 100%; }
+
+.float-right {
+  float: right; }
+
+.float-left {
+  float: left; }
+
+ul.nodots {
+  margin: 0;
+  padding-left: 0; }
+  ul.nodots li {
+    list-style-type: none !important; }
+
+.active {
+  display: block; }
+
+.not-active {
+  display: none; }
+
+.events-none {
+  pointer-events: none; }
+
+.vis-hidden {
+  visibility: hidden; }
+
+.relative {
+  position: relative; }
+
+/* ------------------------------------
+ * Spacing - Padding and Margin
+ * ------------------------------------ */
+/*
+ * Generate spacepad and spacemar
+ * result: spacepad-5, spacepad-10, etc..
+ */
+.spacepad-5 {
+  padding-top: 5px;
+  padding-bottom: 5px; }
+
+.spacemar-5 {
+  margin-top: 5px;
+  margin-bottom: 5px; }
+
+.spacepad-10 {
+  padding-top: 10px;
+  padding-bottom: 10px; }
+
+.spacemar-10 {
+  margin-top: 10px;
+  margin-bottom: 10px; }
+
+.spacepad-15 {
+  padding-top: 15px;
+  padding-bottom: 15px; }
+
+.spacemar-15 {
+  margin-top: 15px;
+  margin-bottom: 15px; }
+
+.spacepad-20 {
+  padding-top: 20px;
+  padding-bottom: 20px; }
+
+.spacemar-20 {
+  margin-top: 20px;
+  margin-bottom: 20px; }
+
+.no-padding-top {
+  padding-top: 0px; }
+
+.no-margin-top {
+  margin-top: 0px; }
+
+.no-padding-right {
+  padding-right: 0px; }
+
+.no-margin-right {
+  margin-right: 0px; }
+
+.no-padding-bottom {
+  padding-bottom: 0px; }
+
+.no-margin-bottom {
+  margin-bottom: 0px; }
+
+.no-padding-left {
+  padding-left: 0px; }
+
+.no-margin-left {
+  margin-left: 0px; }
+
+.no-padding {
+  padding: 0; }
+
+.no-spacepad {
+  padding-top: 0;
+  padding-bottom: 0; }
+
+.no-spacepad-side {
+  padding-left: 0;
+  padding-right: 0; }
+
+.no-margin {
+  margin: 0; }
+
+.no-spacemar {
+  margin-top: 0;
+  margin-bottom: 0; }
+
+.no-spacemar-side {
+  margin-left: 0;
+  margin-right: 0; }
+
+/* ------------------------------------ */
+/*use the nofloat if child(div) elements are float*/
+.vertical-align-nofloat > div,
+.vertical-align-nofloat > ul {
+  display: inline-block;
+  float: none !important;
+  vertical-align: middle; }
+
+/*move the all child of the div except the first child so that it can sit side by side*/
+.vertical-align-nofloat > div:not(first-child),
+.vertical-align-nofloat > ul:not(first-child) {
+  margin-left: -4px; }
+
+/* create skew object - it must have the correct html structure*/
+.skew-bg {
+  transform: skew(0, -3deg); }
+.skew-content {
+  transform: skew(0, 3deg); }
+
+/*# sourceMappingURL=style.css.map */
