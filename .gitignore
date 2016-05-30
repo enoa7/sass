@@ -1,3 +1,4 @@
 # List of ignored files
 
 .sass-cache/
+.DS_Store
