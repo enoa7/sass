@@ -70,6 +70,14 @@ ul.nodots {
         margin-top: $x + px;
         margin-bottom: $x + px;
     }
+    .spacepad-side-#{$x} {
+        padding-left: $x + px;
+        padding-right: $x + px;
+    }
+    .spacemar-side-#{$x} {
+        margin-left: $x + px;
+        margin-right: $x + px;
+    }
 }
 
 $direction: top right bottom left;
